@@ -4,6 +4,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 const geocode = require('./geocode');
+const weather = require('./weather');
 
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -15,7 +16,8 @@ app.get('/', (req, res) => {
 app.post('/', async (req, res) => {
   const city = req.body.place;
   const loc = await geocode.geo(city);
-  res.render('result', { location: loc[0] });
+  const weath = await weather.wt(loc[1], loc[2]);
+  res.render('result', { location: loc[0], weather: weath[0] });
 });
 
 app.listen(PORT, () => {
