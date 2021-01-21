@@ -42,7 +42,7 @@
         <h3 class="info"><%= temperature %> &deg;C</h3>
         <div class="bar">
           <div class="emptybar"></div>
-          <div class="filledbar"></div>
+          <div class="filledbar temp-bar" style="--wid:<%= temperature %>;"</div>></div>
         </div>
         <div class="circle">
           <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
@@ -55,7 +55,7 @@
         <h3 class="info"><%= precipitation %> %</h3>
         <div class="bar">
           <div class="emptybar"></div>
-          <div class="filledbar"></div>
+          <div class="filledbar" style="--wid:<%= precipitation %>;"></div>
         </div>
         <div class="circle">
           <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
@@ -68,7 +68,7 @@
         <h3 class="info"><%= humidity %> %</h3>
         <div class="bar">
           <div class="emptybar"></div>
-          <div class="filledbar"></div>
+          <div class="filledbar" style="--wid:<%= humidity %>;"></div>
         </div>
         <div class="circle">
           <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
@@ -81,7 +81,7 @@
         <h3 class="info"><%= wind %> km/h</h3>
         <div class="bar">
           <div class="emptybar"></div>
-          <div class="filledbar"></div>
+          <div class="filledbar" style="--wid:<%= wind %>;"></div>
         </div>
         <div class="circle">
           <svg version="1.1" xmlns="http://www.w3.org/2000/svg">

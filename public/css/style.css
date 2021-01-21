@@ -7,7 +7,8 @@ body {
 }
 h1 {
   text-align: center;
-  padding: 20px;
+  /* padding: 20px; */
+  font-size: 5em;
 }
 .form-wrapper {
   display: flex;
@@ -148,6 +149,7 @@ input[type='submit'] {
   left: 20px;
   top: 15px;
 }
+
 .info {
   color: transparent;
   font-weight: 300;
@@ -187,13 +189,21 @@ input[type='submit'] {
 }
 
 .card:hover .filledbar {
-  width: 120px;
+  width: calc(var(--wid) * 1%);
   transition: 0.4s ease-out;
+}
+
+.card:hover .temp-bar {
+  width: calc(var(--wid) / 60 * 100%);
 }
 
 .card:hover .info {
   color: #fff;
   transition: 0.4s ease-out;
+}
+.card:hover .title {
+  color: red;
+  transition: 0.5s ease-out;
 }
 
 .circle {
