@@ -3,14 +3,92 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+      integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
     <title>Document</title>
   </head>
   <body>
-    <form action="/" method="POST">
-      <input type="text" name="place" />
-      <input type="submit" value="Get Weather" />
-    </form>
-    <p>Location :<%= location %></p>
-    <p>Current Temp :<%= weather %></p>
+    <%- include('partials/header.ejs') %>
+    <div class="form-wrapper">
+      <form action="/" method="POST">
+        <input type="text" name="place" />
+        <br />
+        <input type="submit" value="Get Weather" />
+      </form>
+    </div>
+    <p class="location">
+      <span class="location-tag">Location : </span><%= location %>
+    </p>
+    <!-- <div class="data-grid">
+      <div class="data-item">
+        <div class="data-icon">
+          <i class="fas fa-thermometer-half fa-6x"></i>
+        </div>
+
+        <div class="data-text">Current Temp :<%= weather %></div>
+      </div>
+      <div class="data-item">Current Temp :<%= weather %></div>
+      <div class="data-item">Current Temp :<%= weather %></div>
+      <div class="data-item">Current Temp :<%= weather %></div>
+    </div> -->
+    <div class="container">
+      <div class="card">
+        <h3 class="title">Temperature</h3>
+        <h3 class="info"><%= weather %></h3>
+        <div class="bar">
+          <div class="emptybar"></div>
+          <div class="filledbar"></div>
+        </div>
+        <div class="circle">
+          <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+            <circle class="stroke" cx="60" cy="60" r="50" />
+          </svg>
+        </div>
+      </div>
+      <div class="card">
+        <h3 class="title">Temperature</h3>
+        <h3 class="info"><%= weather %></h3>
+        <div class="bar">
+          <div class="emptybar"></div>
+          <div class="filledbar"></div>
+        </div>
+        <div class="circle">
+          <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+            <circle class="stroke" cx="60" cy="60" r="50" />
+          </svg>
+        </div>
+      </div>
+      <div class="card">
+        <h3 class="title">Temperature</h3>
+        <h3 class="info"><%= weather %></h3>
+        <div class="bar">
+          <div class="emptybar"></div>
+          <div class="filledbar"></div>
+        </div>
+        <div class="circle">
+          <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+            <circle class="stroke" cx="60" cy="60" r="50" />
+          </svg>
+        </div>
+      </div>
+      <div class="card">
+        <h3 class="title">Temperature</h3>
+        <h3 class="info"><%= weather %></h3>
+        <div class="bar">
+          <div class="emptybar"></div>
+          <div class="filledbar"></div>
+        </div>
+        <div class="circle">
+          <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+            <circle class="stroke" cx="60" cy="60" r="50" />
+          </svg>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

@@ -3,12 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/style.css" />
     <title>Document</title>
   </head>
   <body>
-    <form action="/" method="POST">
-      <input type="text" name="place" />
-      <input type="submit" value="Get Weather" />
-    </form>
+    <%- include('partials/header.ejs') %>
+    <div class="form-wrapper">
+      <form action="/" method="POST">
+        <input type="text" name="place" />
+        <br />
+        <input type="submit" value="Get Weather" />
+      </form>
+    </div>
   </body>
 </html>
