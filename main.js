@@ -18,7 +18,13 @@ app.post('/', async (req, res) => {
   const city = req.body.place;
   const loc = await geocode.geo(city);
   const weath = await weather.wt(loc[1], loc[2]);
-  res.render('result', { location: loc[0], weather: weath[0] });
+  res.render('result', {
+    location: loc[0],
+    temperature: weath[0],
+    precipitation: weath[1],
+    humidity: weath[2],
+    wind: weath[3],
+  });
 });
 
 app.listen(PORT, () => {
