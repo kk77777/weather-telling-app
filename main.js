@@ -24,6 +24,8 @@ app.post('/', async (req, res) => {
     precipitation: weath[1],
     humidity: weath[2],
     wind: weath[3],
+    day: weath[4],
+    week: weath[5],
   });
 });
 

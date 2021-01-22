@@ -105,7 +105,15 @@ input[type='submit'] {
   font-size: 1.5em;
 }
 */
+
 .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.card-container {
   position: relative;
   height: 300px;
   width: 600px;
@@ -241,4 +249,14 @@ svg {
 .card:hover .icon {
   color: #fff;
   transition: 1s ease-out;
+}
+
+.forcast {
+  transform: translateY(60px);
+  position: relative;
+}
+
+.pred-title {
+  font-weight: bold;
+  color: #3f51b5;
 }

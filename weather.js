@@ -15,7 +15,9 @@ async function wt(lat, lon) {
     humidity *= 100;
     humidity = humidity.toFixed(2);
     let wind = response.data.currently.windSpeed;
-    return (weath = [temp, prec, humidity, wind]);
+    let day = response.data.hourly.summary;
+    let week = response.data.daily.summary;
+    return (weath = [temp, prec, humidity, wind, day, week]);
   } catch (error) {
     console.log(error);
   }
