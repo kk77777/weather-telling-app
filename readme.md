@@ -40,6 +40,9 @@ This is a weather app that gets live weather information for a place entered by 
 - Set values of environment variables.
 - Run `node main.js`
 
+#### Working
+![working](https://github.com/kk77777/weather-informer/blob/main/public/css/assets/weather-app.gif)
+
 [Back To The Top](#weather-app)
 
 ---
